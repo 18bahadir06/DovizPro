@@ -12,6 +12,7 @@ using System.Web.Security;
 
 namespace DovizPro.Controllers
 {
+    [AllowAnonymous] //Authorize etiketi dışında tutmak için kullanılır.
     public class LoginController : Controller
     {
         UserManager um = new UserManager(new EfUserDal());
@@ -23,7 +24,6 @@ namespace DovizPro.Controllers
         [HttpPost]
         public ActionResult Index(User p)
         {
-
             var a=um.UserRegister(p.Gmail, p.Password);
             if (a != null)
             {
@@ -40,9 +40,9 @@ namespace DovizPro.Controllers
             return View();
         }
         [HttpGet]
+        [Authorize]
         public ActionResult SignUp() 
         {
-
             return View();
         }
         [HttpPost]
@@ -52,6 +52,7 @@ namespace DovizPro.Controllers
             ValidationResult result = uservalide.Validate(p);
             if (result.IsValid)
             {
+                um.UserAdd(p);
                 return RedirectToAction("Index");
             }
             else

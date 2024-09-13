@@ -31,7 +31,7 @@ namespace DovizPro.Controllers
                 Session["Gmail"] = a.Gmail;
                 Session["Name"] = a.Name;
                 Session["SurName"] = a.SurName;
-                return View("Kullanıcı girişi başarılı");
+                return RedirectToAction("Index","Home");
             }
             else
             {

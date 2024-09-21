@@ -16,8 +16,8 @@ namespace DovizPro.Controllers
         [Authorize]
         public async Task<ActionResult> Index()
         {
-            var a =await cm.GetRatesAsync();
-            decimal b = cm.trytoeuro(a);
+            //var a =await cm.GetRatesAsync();
+            //decimal b = cm.trytoeuro(a);
             return View();
         }
     }

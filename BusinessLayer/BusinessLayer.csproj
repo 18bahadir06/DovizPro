@@ -53,9 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICurrencyDataService.cs" />
+    <Compile Include="Abstract\ICurrencyInternetService.cs" />
+    <Compile Include="Abstract\ICurrencyPresentationService.cs" />
     <Compile Include="Abstract\ICurrencyService.cs" />
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Concrete\CurrencyApiManager.cs" />
+    <Compile Include="Concrete\CurrencyDataManager.cs" />
+    <Compile Include="Concrete\CurrencyInternetManager.cs" />
+    <Compile Include="Concrete\CurrencyPresentationManager.cs" />
     <Compile Include="Concrete\UserHashing.cs" />
     <Compile Include="Concrete\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

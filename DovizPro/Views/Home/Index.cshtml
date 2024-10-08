@@ -33,80 +33,81 @@
                     <h6 class="card-title">Website Audience Metrics</h6>
                     <p class="card-text">Audience to which the users belonged while on the current date range.</p>
                 </div>
-                <div class="btn-group">
-                    <button class="btn active">Day</button>
-                    <button class="btn">Week</button>
-                    <button class="btn">Month</button>
-                </div>
             </div><!-- card-header -->
             <div class="card-body">
-                <div class="card-body-top">
-                    <div>
-                        <label class="mg-b-0">Users</label>
-                        <h2>13,956</h2>
-                    </div>
-                    <div>
-                        <label class="mg-b-0">Bounce Rate</label>
-                        <h2>33.50%</h2>
-                    </div>
-                    <div>
-                        <label class="mg-b-0">Page Views</label>
-                        <h2>83,123</h2>
-                    </div>
-                    <div>
-                        <label class="mg-b-0">Sessions</label>
-                        <h2>16,869</h2>
-                    </div>
-                </div><!-- card-body-top -->
-                <div class="flot-chart-wrapper">
-                    <div id="flotChart" class="flot-chart"></div>
-                </div><!-- flot-chart-wrapper -->
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="wd-5p">&nbsp;</th>
+                                <th class="wd-45p">Kur</th>
+                                <th>Bugün</th>
+                                <th>1 Ay önce</th>
+                                <th>Yüzde</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="flag-icon flag-icon-us flag-icon-squared"></i></td>
+                                <td><strong>Dolar</strong></td>
+                                <td><strong>@TempData["Dolar"]</strong> (1.51%)</td>
+                                <td>33.58%</td>
+                                <td>15.47%</td>
+                            </tr>
+                            <tr>
+                                <td><i class="flag-icon flag-icon-eu flag-icon-squared"></i></td>
+                                <td><strong>Euro</strong></td>
+                                <td><strong>@TempData["Euro"]</strong> (3.30%)</td>
+                                <td>9.22%</td>
+                                <td>7.99%</td>
+                            </tr>
+                            <tr>
+                                <td><i class="flag-icon flag-icon-eu flag-icon-squared"></i></td>
+                                <td><strong>Euro</strong></td>
+                                <td><strong>@TempData["dolars"]</strong> (1.30%)</td>
+                                <td>9.22%</td>
+                                <td>7.99%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div><!-- card-body -->
         </div><!-- card -->
-    </div><!-- col -->
+    </div>
     <div class="col-lg-5 mg-t-20 mg-lg-t-0">
         <div class="row row-sm">
             <div class="col-sm-6">
                 <div class="card card-dashboard-two">
                     <div class="card-header">
-                        <h6>33.50% <i class="icon ion-md-trending-up tx-success"></i> <small>18.02%</small></h6>
+                        <h6>@TempData["Dolar"] <i class="icon ion-md-trending-up tx-success"></i> <small>18.02%</small></h6>
                         <p>Bounce Rate</p>
                     </div><!-- card-header -->
                     <div class="card-body">
                         <div class="chart-wrapper">
-                            <div id="flotChart1" class="flot-chart"></div>
+                            <div id="flotChart1" class="flot-chart">></div>
                         </div><!-- chart-wrapper -->
-                    </div><!-- card-body -->
+                    </div>
+                    <a href="" class="btn btn-purple">Export</a>
                 </div><!-- card -->
             </div><!-- col -->
             <div class="col-sm-6 mg-t-20 mg-sm-t-0">
                 <div class="card card-dashboard-two">
                     <div class="card-header">
-                        <h6>86k <i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small></h6>
+                        <h6>@TempData["Euro"]  <i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small></h6>
                         <p>Total Users</p>
                     </div><!-- card-header -->
                     <div class="card-body">
                         <div class="chart-wrapper">
                             <div id="flotChart2" class="flot-chart"></div>
                         </div><!-- chart-wrapper -->
-                    </div><!-- card-body -->
+                    </div>
+                    <a href="" class="btn btn-purple">Export</a>
                 </div><!-- card -->
             </div><!-- col -->
-            <div class="col-sm-12 mg-t-20">
-                <div class="card card-dashboard-three">
-                    <div class="card-header">
-                        <p>All Sessions</p>
-                        <h6>16,869 <small class="tx-success"><i class="icon ion-md-arrow-up"></i> 2.87%</small></h6>
-                        <small>The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc.</small>
-                    </div><!-- card-header -->
-                    <div class="card-body">
-                        <div class="chart"><canvas id="chartBar5"></canvas></div>
-                    </div>
-                </div>
-            </div>
         </div><!-- row -->
     </div><!--col -->
 </div><!-- row -->
+
 
 <div class="row row-sm mg-b-20">
     <div class="col-lg-4">
@@ -241,6 +242,7 @@
                         <span class="card-text">Tells you where your visitors originated from, such as search engines, social networks or website referrals.</span>
                     </div><!-- card-header -->
                     <div class="card-body row row-sm">
+                        
                         <div class="col-6 d-sm-flex align-items-center">
                             <div class="card-chart bg-primary">
                                 <span class="peity-bar" data-peity='{"fill": ["#fff"], "width": 20, "height": 20 }'>6,4,7,5,7</span>
@@ -248,8 +250,11 @@
                             <div>
                                 <label>Bounce Rate</label>
                                 <h4>33.50%</h4>
+                                
                             </div>
+                            
                         </div><!-- col -->
+                        
                         <div class="col-6 d-sm-flex align-items-center">
                             <div class="card-chart bg-purple">
                                 <span class="peity-bar" data-peity='{"fill": ["#fff"], "width": 21, "height": 20 }'>7,4,5,7,2</span>
@@ -301,10 +306,10 @@
                     <thead>
                         <tr>
                             <th class="wd-5p">&nbsp;</th>
-                            <th class="wd-45p">Country</th>
-                            <th>Entrances</th>
-                            <th>Bounce Rate</th>
-                            <th>Exits</th>
+                            <th class="wd-45p">Kur</th>
+                            <th>Bugün</th>
+                            <th>1 Ay önce</th>
+                            <th>Yüzde   </th>
                         </tr>
                     </thead>
                     <tbody>

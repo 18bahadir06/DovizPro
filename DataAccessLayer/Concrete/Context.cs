@@ -11,5 +11,6 @@ namespace DataAccessLayer.Concrete
     public class Context:DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<TcmbCurrency> TcmbCurrencys { get; set; }
     }
 }

@@ -12,5 +12,6 @@ namespace BusinessLayer.Abstract
         TcmbCurrency CurrencyProcessGet(DateTime p);
         List<TcmbCurrency> CurrencyMounthGet(DateTime p);
         List<TcmbCurrency> CurrencyYearGet(DateTime p);
+        TcmbCurrency CurrencyPastMounth(DateTime p);
     }
 }
